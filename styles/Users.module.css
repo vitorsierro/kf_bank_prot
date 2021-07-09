@@ -1,0 +1,26 @@
+.Col{
+  width: 25%;
+  height: 13rem;
+  padding-left: 24px;
+  padding-top: 24px;
+  margin-right: 5rem;
+  background-color: #71e49d;
+}
+
+.Row{
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-bottom: 5rem;
+}
+.Divider{
+  border: 4px #2ea765 !important;
+}
+.ColInterno{
+  height: 6rem;
+}
+.Col hr{
+  position: relative;
+  width: 15.9rem;
+  left: -1.5rem;
+  border-color: #2ea765;
+}

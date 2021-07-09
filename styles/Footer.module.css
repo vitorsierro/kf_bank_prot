@@ -1,0 +1,56 @@
+.Col{
+  margin: 2rem 4rem;
+}
+.ColFinal{
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: 10rem;
+}
+.Link{
+  margin-top: 1rem;
+}
+.Col h3, .ColFinal h3 {
+  cursor: pointer;
+  height: 3rem;
+}
+.Col h3:hover, .ColFinal h3:hover{
+  color: #2ea765;
+  border-bottom: 2px solid #2ea765;
+ 
+}
+.Logo{
+  background-image: url(../public/img/logo_alterado.png);
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-size: 60px;
+  width: 60px;
+  height: 60px;
+}
+.FooterFacebook{
+  background-image: url(../public/img/icone_facebook.png);
+  background-position: 0px;
+  background-size: 25px;
+  margin-right: 2rem;
+  width: 25px;
+  height: 25px;
+}
+.FooterFacebook:hover{
+  background-image: url(../public/img/icone_facebook_ativo.png);
+  background-position: 0px;
+  background-size: 25px;  
+}
+.FooterInstragram{
+  background-image: url(../public/img/icone_instagram.png);
+  background-position: 0px;
+  background-size: 25px;
+  width: 25px;
+  height: 25px;
+}
+.FooterInstragram:hover{
+  background-image: url(../public/img/icone_instagram_ativo.png);
+  background-position: 0px;
+  background-size: 25px;  
+}
+.Footer{
+  text-align: center;
+}

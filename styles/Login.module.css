@@ -1,0 +1,91 @@
+.Container{
+ background: linear-gradient(to bottom right, #e5f7ea, #2ea765);
+ height: 100%;
+ padding-bottom: 3rem;
+}
+.Container  img{
+  position: relative;
+  top: 4rem;
+  margin-left: 2rem !important;
+}
+
+.Login{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 38%;
+  height: 420px;
+  top: 3.5rem;
+  
+  margin-left: 33%;
+  padding: 4rem 6rem;
+  
+  background: #bfeacc;
+  border-radius: 4rem;
+  
+}
+.Login input{
+  width: 250px;
+  height: 28px;
+  padding: 0.75rem 0.5rem !important;
+}
+.Buttons div{
+  display: flex;
+  justify-content: space-between; 
+}
+.Buttons button{
+  background-color: #2ea765;
+  border-color: #2ea765;
+  color: white;
+  border-radius: 1.5rem;
+}
+.Buttons button:hover, .Buttons button:active, .Buttons button:focus{
+  background-color: #71e49d;
+  border-color: #71e49d;
+  color: white;
+}
+.Steps{
+  position: relative;
+  top: -4.25rem;
+}
+
+.Cadastro{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 80%;
+  height: 100%;
+  
+  margin-left: 12%;
+  padding: 6rem 6rem;
+  
+  background: #bfeacc;
+  border-radius: 4rem;
+  
+}
+.Input{
+  margin-right: 6rem;
+}
+.Input input{
+  width: 260px !important;
+  height: 40px;
+  border-radius: 2rem;
+  padding: 0.75rem 1.25rem !important;
+}
+.Input label{
+  display: flex;
+  white-space: break-spaces;
+  align-items: end;
+  text-align: left;
+
+  width: 100px;
+  height: 100%;
+  
+  }
+.Input span{
+  margin-left: auto !important;
+}
+.Row{
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+}

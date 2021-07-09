@@ -1,0 +1,222 @@
+/*====================================================================
+                          OPEN  Header
+=====================================================================*/
+
+.Nav{ 
+       display: flex;
+       background-color: #b1e6c1;
+       padding: .25rem;
+       justify-content: flex-end;
+       }
+
+.Logo{
+  margin-right: auto;
+  margin-left: 1rem;
+}
+.Logo:active, .Logo:focus, .Logo:hover{
+  background-color: #ccefd6;
+  border-radius: 25%;
+  
+}
+.Pesquisar{
+  margin-top: 1.5rem;
+  max-width: 320px;
+  min-width: 230px;
+}
+.Notificacoes {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.Notificacoes button{
+  height: 3rem;
+  border-radius: 100%;
+}
+
+.fotoPerfil{
+  border-radius: 100%;
+  background-position: bottom;
+}
+
+.NavPerfil{
+  position: relative;
+  display: inline-block;
+  margin: 0rem 2rem;
+  min-width: 3rem;
+}
+.NavPerfil{
+  margin-top: 0.25rem;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background: unset;
+}
+.NavPerfil img{
+  border-radius: 100%;
+}
+.NavPerfilContent {
+  display: none;
+  position: absolute;
+  background-color: #b1e6c1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.NavPerfilContent a { color: white;}
+.NavPerfilContent ul{
+  padding: 1rem;
+}
+.NavPerfilContent li{
+  padding: 12px 16px !important;
+  text-decoration: none;
+  display: block;
+}
+
+.NavPerfil li:hover{
+  color: white !important;
+  background-color: #58cb86;
+}
+.NavPerfil li:last-child{
+  background: #d60002; 
+  color:white !important;
+}
+
+.NavPerfil li:last-child:hover{
+  background: #e92513;
+}
+.NavPerfil:hover .NavPerfilContent {
+  display: block;
+}
+
+/*====================================================================
+                        CLOSE  HEADER
+=====================================================================*/
+/*====================================================================
+                        OPEN  DRAW
+=====================================================================*/
+.NotificacoesInterno{
+  display: flex;
+  flex-flow: column;
+}
+/*====================================================================
+                        CLOSE  DRAW
+=====================================================================*/
+/*====================================================================
+                        OPEN   MODAL
+=====================================================================*/
+.Hamburgue{
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.5rem 2rem;
+}
+.Hamburgue:checked{
+  position: relative;
+  left: 65%;    
+  top: 5rem;
+  z-index: 3;
+}
+.Hamburgue input{
+  position: absolute;
+  opacity: 0;
+}
+
+.Hamburgue label{
+  cursor: pointer;
+  position: relative;
+  display: block;
+  height: 22px;
+  width: 30px;
+}
+
+.Hamburgue label span{
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 100%;
+  border-radius: 30px;
+  background: #58cb86;
+  transition: 0.25s ease-in-out;
+}
+
+.Hamburgue label span:nth-child(1){
+  top: 0;
+}
+
+.Hamburgue label span:nth-child(2){
+  top: 8px;
+}
+
+.Hamburgue label span:nth-child(3){
+  top: 16px;
+}
+
+.Hamburgue input:checked + label span:nth-child(1){
+  transform: rotate(-45deg);
+  top: 8px;
+}
+
+.Hamburgue input:checked + label span:nth-child(2){
+  opacity: 0;
+}
+
+.Hamburgue input:checked + label span:nth-child(3){
+  transform: rotate(45deg);
+  top:8px;
+}
+.Modal {
+  padding: 30px;
+  max-width: 72rem;
+  min-width: 36rem;
+  max-height: 85%;
+  overflow: auto;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  z-index: 2;
+  border-radius: 4px;
+  background: #e5f7ea;
+  transform: translate(-50%, 0);
+  transition: all 0.5s ease-in-out;
+}
+.Close{
+  cursor: pointer;
+}
+.Item{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer; 
+}
+.Item li{ 
+  text-align: center;
+  list-style: none;
+  margin-bottom: 2rem;
+  padding:1rem;
+  cursor: pointer; 
+  
+}
+.ItemBtn{
+  border:none;
+  background: unset;
+}
+.Item span{
+  display: block;
+  position: relative;
+}
+.Item  li:hover{background-color:#b1e6c1 ;}
+.ItemAnimado:hover{  
+  animation: rotate 1s;
+}
+
+@keyframes rotate{
+  0%{
+      transform: rotateY(0deg);
+  }
+  50%{
+      transform: rotateY(180deg);
+  }
+  100%{
+      transform: rotateY(360deg);
+  }
+}
+/*====================================================================
+                        CLOSE  MODAL
+=====================================================================*/

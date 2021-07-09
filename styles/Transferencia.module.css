@@ -1,0 +1,184 @@
+.Row{
+  margin-left: 10rem !important;
+  margin-right: 10rem !important;
+  margin-bottom: 3rem !important;
+  padding: 3rem 3rem;
+  background-color: #71e49d;
+  border-radius: 2rem;
+  justify-content: center;
+}
+.Col{
+  width: 50%;
+}
+.Col h3{ color: white;}
+.Row h4{ color: #545454;}
+.Button{
+  margin-left: 0.5rem;
+  height: 3rem;
+  border-radius: 2rem;
+  padding: 0rem 2rem;
+  
+  border: 3px solid white !important;
+  background: #2ea765 !important;
+  color: white !important;
+  font-size: 20px;
+  font-weight: 700;
+}
+.Button:hover,.Button:active{
+  border: 3px solid #2ea765 !important;
+  background: white !important;
+  color: #2ea765 !important;
+}
+.TableBackground{
+  width: 100%;
+  background-color: #71e49d;
+  margin: 1rem 4rem;
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+}
+.TableBackground th{
+  border-bottom: 1px solid #2ea765 !important;
+  border-right: 1px solid #2ea765 !important;
+}
+.TableBackground div, .TableBackground  th{
+  background-color: #71e49d !important;
+}
+.TableBackground td{
+  border: unset  !important;
+  background-color: unset !important;
+}
+.TableBackground td:hover,.TableBackground  th:hover {
+  background-color: #71e49d !important;
+}
+.TableBackground ul li button,.TableBackground ul li a,.TableBackground ul li{
+  font-size: 1rem !important;
+  color: white !important;
+  background-color: #71e49d !important;
+  border: unset !important;
+}
+/*-------------------------------------------------------------------
+                        PIX
+---------------------------------------------------------------------*/
+.Col textarea{
+  color: white;
+  background-color: #71e49d;
+}
+.TablePix td{
+  border-bottom: 1px solid #2ea765 !important;
+}
+.TablePix tr:hover{
+  color: white;
+  
+}
+.RowResgate{
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-bottom: 3rem;
+  padding: 1rem 3rem;
+  background-color: #71e49d;
+  border-radius: 2rem;
+}
+.RowResgate .ant-tabs-tab{
+ background-color: #2ea765 !important;
+ border-color: #58cb86 !important; 
+ color: white !important;
+}
+.TablePix{
+  width: 100%;
+  background-color: #71e49d;
+  margin: 1rem 2rem !important;
+  padding: 1rem 3rem !important;
+  border-radius: 3rem;
+}
+.test .ant-tabs-tab, .test .ant-tabs-tab-active{
+  background-color:#2ea765 !important;
+}
+.PixBancarioModal label{
+  width: 4.75rem;
+}
+.PixBancarioModal input{
+  border-radius: 2rem;
+}
+/*----------------------------------------------------------------------
+                      FINANCEIRO
+---------------------------------------------------------------------*/
+.ButtonNotRadius{
+  margin-left: unset;
+  border-radius: unset;
+  border: 1px solid white !important;
+}
+.RowFinanceiro{
+  margin-left: 11rem  !important;
+  margin-right: 10rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.ColFinanceiro {
+  margin-right: 1.5rem;
+  padding: 1rem;
+  background-color: #71e49d;
+  border-radius: 2rem;
+  max-width: 14% !important;
+  }
+
+.ColFinanceiro hr{
+  position: relative;
+  width: 8.7rem;
+  left: -1.25rem;
+  border-color: #2ea765;
+}
+.ColFinanceiro header{
+  height: 3rem;
+}
+.ColFinanceiro h3{
+  margin-top: 0.5rem;
+  margin-bottom: 0rem;
+  color: white;
+  font-weight: bold;
+}
+.ColFinanceiro h5{
+  margin-top: 0.5rem;
+  margin-bottom: 0rem;
+  font-weight: normal;
+}
+.Alert div:last-child{
+  color: white !important;
+}
+.ButtonCancelar{
+  margin-left: 0.5rem;
+  height: 3rem;
+  border-radius: 2rem;
+  padding: 0rem 2rem;
+  margin-right: 7rem;
+  
+  border: 3px solid white !important;
+  background:red !important;
+  color:white !important;
+  font-size: 20px;
+  font-weight: 700;
+}
+.ButtonCancelar:hover,.ButtonCancelar:active{
+  border: 3px solid red !important;
+  background: white!important;
+  color:red !important;
+}
+
+.padding1rem{
+  padding:1rem 0rem !important;
+}
+.TransacoesTable{
+  margin: 1rem 11rem !important;
+  padding: 2rem 3rem !important;
+}
+.ColTransacoes{
+  margin-right: 1rem;
+  padding: 1rem;
+  padding-right: 1rem !important;
+  background-color: #71e49d;
+  border-radius: 2rem;
+  max-width: 15% !important;
+
+}
+.ColTransacoes hr{
+  width: 9.3rem;
+}
