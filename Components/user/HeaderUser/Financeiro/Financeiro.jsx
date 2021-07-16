@@ -5,7 +5,6 @@ import Image from 'next/image';
 
 //Imagens Financeiro
 import voltar from '../../../../public/img/voltar.png';
-import sair from '../../../../public/img/sair.png';
 import extrato from '../../../../public/img/rendimentos.png';
 import resgate from '../../../../public/img/resgate.png';
 import deposito from '../../../../public/img/deposito.png';
@@ -33,7 +32,6 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
   const Header = ({ id }) => (
     <Row style={{ justifyContent: 'space-between', marginBottom: '2rem' }}>
       <Image src={voltar} width={30} height={30} className={styled.Close} onClick={() => (handleReturn(id))} />
-      <Image src={sair} width={30} height={30} className={styled.Close} onClick={onClose} />
     </Row>
   )
   const width = 30;

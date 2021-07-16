@@ -16,7 +16,7 @@ export default function Usuarios() {
   return (
     <>
       <HeaderUser />
-      <Row className={styled.Row} style={{ justifyContent: 'initial' }}>
+      <Row className={styled.Row}>
         <Button className={styled.Button} onClick={showModal}>
           ADICIONAR USUÁRIOS
         </Button>

@@ -17,7 +17,7 @@ export default function Grupos() {
   return (
     <>
       <HeaderUser />
-      <Row className={styled.Row} style={{ justifyContent: 'initial' }}>
+      <Row className={styled.Row}>
         <Button className={styled.Button} onClick={showModal}>
           ADICIONAR GRUPO
         </Button>

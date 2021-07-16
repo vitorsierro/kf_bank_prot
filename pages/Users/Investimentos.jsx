@@ -19,7 +19,7 @@ export default function Investimentos() {
   <>
     <HeaderUsers />
     <Row className={styled.RowFinanceiro}>
-      <Col className={styled.ColFinanceiro} style={{maxWidth:'unset !important', padding:'2rem 5rem'}}>
+      <Col className={`${styled.ColFinanceiro} ${styled.ColInvestimento}`}>
       <header>
         <h3>Meus Investimentos</h3>
       </header>
@@ -37,18 +37,21 @@ export default function Investimentos() {
      <h2>Grafico de investimento</h2>
     </Col>    
     <Chart
-      width={'600px'}
+      width={'800px'}
       height={'400px'}
       chartType="LineChart"
-      loader={<div>Loading Chart</div>}
+      loader={<div>Carregando grafico</div>}
       data={data}
       options={{
+       
         hAxis: {
           title: 'Tempo em semenstre',
         },
         vAxis: {
           title: 'Porcentagem Acumulada',
         },
+        animation:{duration:30},
+        backgroundColor:'#71e49d',
         series: {
           1: { curveType: 'function' },
         },
