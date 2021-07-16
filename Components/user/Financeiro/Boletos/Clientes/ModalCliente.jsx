@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Row, Col, Select, Input, Form, DatePicker, Divider, Button } from "antd";
+import { Row, Col, Select, Input, Form, Divider } from "antd";
 import styled from '../../../../../styles/Transferencia.module.css';
 import telefoneDDD from '../../../../../models/telefoneDDD';
 import FormEndereco from '../../../../../Components/FormularioComDados/DadosEndereco/FormEndereco'

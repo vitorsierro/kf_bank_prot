@@ -1,0 +1,27 @@
+.RowFinanceiro{
+  margin-left: 11rem  !important;
+  margin-right: 10rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.ColFinanceiro {
+  margin-right: 2.55rem;
+  padding: 1rem;
+  background-color: #71e49d;
+  border-radius: 2rem;
+  width: 10rem;
+  }
+
+.ColFinanceiro header{
+  text-align: center;
+  height: 3rem;
+}
+.ColFinanceiro main h4{
+  text-align: center;
+  color: black !important;
+}
+.ColFinanceiro h4{
+  margin-bottom: 0rem;
+  color: white;
+  font-weight:
+}

@@ -74,7 +74,6 @@
 }
 .Input label{
   display: flex;
-  white-space: break-spaces;
   align-items: end;
   text-align: left;
 

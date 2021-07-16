@@ -5,14 +5,19 @@ import styled from '../../styles/Transferencia.module.css'
 
 const { Option } = Select;
 
-export default function DadosAddress() {
-  const [tipoEndereco, setTipoEndereco] = useState('');
+export default function DadosAddress({ aoEnviar  }) {
   const [cep, setCep] = useState('');
   const [estado, setEstado] = useState('');
   const [bairro, setBairro] = useState('');
   const [endereco, setEndereco] = useState('');
   const [numero, setNumero] = useState('');
   const [complemento, setComplemento] = useState('');
+  
+  function handleSubmit (event){
+    event.preventDefault()
+    aoEnviar({ cep, estado, bairro, endereco, numero, complemento })
+  }
+  
   return(
     <>
     <Form layout='vertical'>
@@ -69,10 +74,13 @@ export default function DadosAddress() {
       </Row>
       <Row style={{marginTop:'2rem'}}>
       <Form.Item >
-        <Button type="submit" className={styled.Button}>Anterior</Button>
+        <Button type="submit" className={styled.ButtonCancelar}>
+        Anterior
+        </Button>
       </Form.Item>
       <Form.Item style={{marginLeft: 'auto'}}>
-        <Button type="submit" className={styled.Button} >
+        <Button type="submit" className={styled.Button}
+          onClick={(event) => handleSubmit(event)}>
           Proximo
         </Button>
       </Form.Item>

@@ -1,8 +1,13 @@
-import {Row, Col, Form, Select, Input, Upload, Modal, Button} from 'antd';
-import { PlusOutlined } from '@ant-design/icons';
+//Components
 import { useState } from 'react';
 import FormEndereco from '../FormularioComDados/DadosEndereco/FormEndereco';
+//Icons
+import { PlusOutlined } from '@ant-design/icons';
+//CSS
 import styled from '../../styles/Transferencia.module.css'
+import {Row, Col, Form, Select, Input, Upload, Modal, Button} from 'antd';
+
+
 
 const { Option } = Select;
 const fileList = [
@@ -35,11 +40,17 @@ const uploadButton = (
   </div>
 );
 
-export default function DadosUsuario() {
+export default function DadosUsuario({ aoEnviar, tipo }) {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPasswrod, setRepeatPasswrod] = useState('');
   const [pin, setPin] = useState('');
+  
+  function handleSubmit (event){
+    event.preventDefault()
+    aoEnviar({ login, password, repeatPasswrod, pin})
+  }
+  
   return(
     <>
     <Form layout='vertical'>
@@ -112,9 +123,20 @@ export default function DadosUsuario() {
       <Button type="submit" className={styled.ButtonCancelar}>       
         Anterior
       </Button>
-      <Button type="submit" className={styled.Button} style={{marginLeft:'30rem'}} >
-        Proximo
+      {console.log(tipo)}
+      {tipo !== 'editar' ?
+      <Button type="submit" className={styled.Button} 
+        style={{marginLeft:'30rem'}}
+        onClick={(event) => handleSubmit(event)}>
+          Concluir
       </Button>
+      :
+      <Button type="submit" className={styled.Button} 
+        style={{marginLeft:'30rem'}}
+        onClick={(event) => handleSubmit(event)}>
+          Atualizado
+      </Button>
+      }
     </Row>
   </Row>
   </Form>

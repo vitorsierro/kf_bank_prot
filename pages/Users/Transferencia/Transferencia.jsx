@@ -33,12 +33,13 @@ export default function Transferencia() {
             title="Transferência em massa"
             onCancel={showCloseModalTransferencia}
             footer={[
-              <Button key="submit" type="primary" onClick={showCloseModalTransferencia}>
-                Importar
-              </Button>,
-              <Button key="submit" type="primary" onClick={showCloseModalTransferencia}>
+              <Button key="submit" type="primary" onClick={showCloseModalTransferencia} className={styled.ButtonCancelar}>
                  Cancelar
-              </Button> ]} >
+              </Button>, 
+              <Button key="submit" type="primary" onClick={showCloseModalTransferencia} className={styled.Button}>
+                Importar
+              </Button>
+            ]} >             
           <FormTransferencia />
           </Modal>
         </Col>

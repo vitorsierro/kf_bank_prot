@@ -1,4 +1,5 @@
 import { Table } from "antd";
+import styled from '../../../styles/Transferencia.module.css'
 
 export default function BoletoTable() {
   const columns = [
@@ -70,6 +71,20 @@ export default function BoletoTable() {
       dataVencimento: "06/06/2021",
       Valor: 'R$ 600,00',
       Status: 'Atrasado',
+    },
+    {
+      key: '5',
+      Pagador: 'Fernando Borges',
+      dataVencimento: "06/06/2021",
+      Valor: 'R$ 600,00',
+      Status: 'Atrasado',
+    },
+    {
+      key: '6',
+      Pagador: 'Fernando Borges',
+      dataVencimento: "06/06/2021",
+      Valor: 'R$ 600,00',
+      Status: 'Atrasado',
     }
   ];
   
@@ -78,6 +93,9 @@ export default function BoletoTable() {
   }
   
   return(
-    <Table columns={columns} dataSource={data} onChange={onChange} />
+    <Table columns={columns} dataSource={data} onChange={onChange} 
+    pagination={{ pageSize:4 }}
+    className={`${styled.TableBackground}`} 
+    style={{margin:'unset', borderRadius:'2rem'}} />
     )
 };

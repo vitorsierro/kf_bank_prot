@@ -1,12 +1,18 @@
 .Col{
   width: 25%;
   height: 13rem;
-  padding-left: 24px;
-  padding-top: 24px;
+  padding: 24px;
   margin-right: 5rem;
+  border-radius: 2rem;
   background-color: #71e49d;
 }
-
+.Col header{
+  height: 4rem;
+}
+.Col main{
+  font-size: 24px;
+  text-align: center;
+}
 .Row{
   margin-left: 10rem;
   margin-right: 10rem;
@@ -14,9 +20,6 @@
 }
 .Divider{
   border: 4px #2ea765 !important;
-}
-.ColInterno{
-  height: 6rem;
 }
 .Col hr{
   position: relative;

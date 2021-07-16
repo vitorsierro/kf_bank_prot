@@ -17,16 +17,28 @@ export default function Users() {
       </Divider>
       <Row className={styled.Row}>
         <Col className={styled.Col}>
-          <h3>Saldo Reais (BRL)</h3>
-          <h5>R$ 30,00</h5>
+          <header>
+            <h3>Saldo Reais (BRL)</h3>
+          </header>
+          <main>
+            <h5>R$ 30,00</h5>
+          </main>
         </Col>
         <Col className={styled.Col}>
-          <h3>Saldo Crédito</h3>
-          <h5>R$ 00,00</h5>
+          <header>
+            <h3>Saldo Crédito</h3>
+          </header>
+          <main>
+            <h5>R$ 00,00</h5>
+          </main>
         </Col>
         <Col className={styled.Col}>
-          <h3>Saldo Cartão Pré-Pago (BRL)</h3>
-          <h5>R$ 30,00</h5>
+          <header>
+            <h3>Saldo Cartão Pré-Pago (BRL)</h3>
+          </header>
+          <main>
+            <h5>R$ 30,00</h5>
+          </main>
           <hr />
           <Link href="#cartoes"><p>Solicitar ou Adicionar - Cartão</p></Link>
         </Col>

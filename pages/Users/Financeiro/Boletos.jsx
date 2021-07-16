@@ -76,7 +76,7 @@ export default function Boletos() {
     </Row>
     <Row >
       {isBoleto && <FinBoletos />}
-      {isGerar && <Row style={{marginLeft:'16rem', width:'55rem'}}> <FinGerar /></Row>}
+      {isGerar &&  <FinGerar />}
       {isImportar && <FinImportar />}
       {isGrupos && <FinGrupos />}
       {isClientes && <FinClientes />}

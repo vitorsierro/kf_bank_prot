@@ -4,10 +4,11 @@ import styled from '../../../../styles/Transferencia.module.css';
 
 //Components
 import { useState } from "react";
-import TituloTable from '../../../../Components/user/Financeiro/Pagamentos/Titulos/TituloTable';
-import TituloModal from '../../../../Components/user/Financeiro/Pagamentos/Titulos/TituloModal';
-import HeaderUser from '../../../../Components/user/HeaderUser'
-export default function Titulos() {
+import ContasFavorecidasTable from '../../../../Components/user/Financeiro/Pagamentos/ContasFavorecidas/ContasFavorecidasTable';
+import ContasFavorecidasModal from '../../../../Components/user/Financeiro/Pagamentos/ContasFavorecidas/ContasFavorecidasModal';
+import HeaderUser from '../../../../Components/user/HeaderUser';
+
+export default function ContasFavorecidas() {
   const [visibleModal, setVisibleModal] = useState(false);
   const showModal = () => { setVisibleModal(true); }
   const showOkModal = () => { setVisibleModal(false); }
@@ -21,10 +22,10 @@ export default function Titulos() {
         <Col className={styled.Col}>
           <Button type="primary" className={styled.Button}
             onClick={showModal}>
-            ADICIONAR PAGAMENTOS
+            ADICIONAR CONTA BANCARIA
           </Button>
         </Col>
-        <Modal visible={visibleModal} title="Dados do Título"
+        <Modal visible={visibleModal} title="Dados da Conta"
           onCancel={showCloseModal} width={1024}
           footer={[
             <Button key="submit" type="primary" onClick={showCloseModal} className={styled.ButtonCancelar}>
@@ -32,19 +33,18 @@ export default function Titulos() {
             </Button>,
             <Button key="submit" type="primary" onClick={showOkModal}
               className={styled.Button}>
-              SOLICITAR PAGAMENTO
+              SALVAR
             </Button>]} >
           <Form.Item rules={[{ colon: false, required: true }]}>
-            <TituloModal />
+            <ContasFavorecidasModal />
           </Form.Item>
         </Modal>
       </Row>
       <Row style={{ width: '55rem'}}>
-        <h2>Últimos Títulos</h2>
-        <TituloTable />
+        <h2>Últimos Cadastros</h2>
+        <ContasFavorecidasTable />
       </Row>
     </Row>
   </>
   );
 };
-

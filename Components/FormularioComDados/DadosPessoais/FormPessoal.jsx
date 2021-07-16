@@ -8,7 +8,7 @@ const { Option } = Select
 export default function FormPessoal() {
   const [tipoPessoa, setTipoPessoa ] = useState('');
   const [nome, setNome] = useState('');
-  const [tipoDocumento, setTipoDocumento] = useState('');
+  const [tipoDocumento, setTipoDocumento] = useState('cpf');
   const [documento, setDocumento] = useState('');
   const [dataNascimento, setDataNascimento] = useState(''); 
   const [sexo, setSexo] = useState('');
@@ -29,7 +29,7 @@ export default function FormPessoal() {
             value={tipoPessoa} 
             onChange={(value) => setTipoPessoa(value)} 
           >
-            <Option value="">Selecione</Option>
+            <Option value="">Selecione ..</Option>
             <Option value="pessoaFisica">Pessoa Física</Option>
             <Option value="pessoaJuridica">Pessoa Juridica</Option>
           </Select>
@@ -55,12 +55,19 @@ export default function FormPessoal() {
         <Input.Group compact={true}>
           <Select value={tipoDocumento} style={{width:'30%'}}
             onChange={(value) => setTipoDocumento(value)}>
-              <Option value="">Selecione</Option>
               <Option value="rg">RG</Option>
               <Option value="cpf">CPF</Option>
               <Option value="cnh">CNH</Option>
           </Select>
-          <Input placeholder='XXX.XXX.XXX-XX' style={{width:'70%'}} />  
+          {tipoDocumento === 'cpf' &&
+            <Input placeholder='XXX.XXX.XXX-XX' style={{width:'70%'}}
+            />}
+          {tipoDocumento === 'rg' &&
+            <Input placeholder='XX.XXX.XXX-X' style={{width:'70%'}}
+            />}
+          {tipoDocumento === 'cnh' &&
+            <Input placeholder='XXXXXXXXXXX' style={{width:'70%'}}
+            />} 
         </Input.Group>
       </Form.Item>
     </Col>
@@ -87,12 +94,13 @@ export default function FormPessoal() {
     <Col className={styled.Col}>
       <Form.Item label="Email" 
         rules={[{ colon:false, required:true}]}>
-        <Input placeholder='contato@kfbank.com' type='email' value={email} onChange={(e) => setEmail(e.target.value)} />  
+        <Input placeholder='Contato@KFBank.com' type='email' value={email} onChange={(e) => setEmail(e.target.value)} />  
       </Form.Item>
     </Col>
     <Col className={styled.Col}>
       <Input.Group compact={true}>
         <Form.Item label="Tipo do Telefone" 
+        style={{marginRight:'3.70rem', width:'10rem'}}
         rules={[{ colon:false, required:true}]}>
         <Select value={tipoTelefone} 
           onChange={(value) => setTipoTelefone(value)}>
@@ -102,17 +110,10 @@ export default function FormPessoal() {
             <Option value="comercial">Comercial</Option>
         </Select>
       </Form.Item>
-      
-          <Select value={codigoDDI} required
-            style={{width:'30%', margin:'0rem 0.75rem', marginTop:'3rem'}} 
-            onChange={(value) => setCodigoDDI(value)}>
-            {codPais.map(({fone}) => (
-              <Option value={fone}>{fone.replace(/^0*/, '+')}</Option>
-            ))}
-          </Select>
           <Form.Item label="Telefone" 
             rules={[{ colon:false, required:true}]}>
-          <Input style={{width:'105%'}} placeholder='(xx)xxxxx-xxxx' value={telefone} onChange={(e) => setTelefone(e.target.value)} maxLength={(tipoTelefone === 'celular') ? 11 : 10 } />
+          <Input style={{width:'15.30rem'}} value={telefone}
+          placeholder={(tipoTelefone === 'residencial') ? '+XX(XX)XXXX-XXXX' : '+XX(XX)XXXXX-XXXX' } onChange={(e) => setTelefone(e.target.value)} maxLength={(tipoTelefone === 'celular') ? 14 : 13 } />
       </Form.Item>
     </Input.Group>
     </Col>

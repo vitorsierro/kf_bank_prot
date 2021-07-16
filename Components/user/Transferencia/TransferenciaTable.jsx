@@ -69,6 +69,6 @@ export default function TransferenciaTable() {
   return(
     <Table columns={columns} dataSource={data} 
     pagination={{ pageSize:5 }}
-    onChange={onChange} className={styled.TableBackground} />
+    onChange={onChange} className={`${styled.TableBackground} ${styled.TablePix}`} />
     )
 };

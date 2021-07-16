@@ -19,23 +19,25 @@ export default function Cobranca() {
   return (
     <>
       <HeaderUser />
-      <Button type="primary" onClick={showModalTransferencia}
-        className={styled.Button} style={{marginBottom:'2rem'}}>
-          GERAR CHAVE PIX DE COBRANÇA
-      </Button>
-      <Modal
-        visible={TransferenciaVisible}
-        title="Dados da chave"
-        onCancel={showCloseModalTransferencia}
-        footer={[
-          <Button key="submit" type="primary" onClick={showCloseModalTransferencia}>
-            Gerar
-              </Button>,
-          <Button key="submit" type="primary" onClick={showCloseModalTransferencia}>
-            Cancelar
-              </Button>]} >
-        <PixCobrancaModal />
-      </Modal>
+      <Row className={styled.Row}>
+        <Button type="primary" onClick={showModalTransferencia}
+          className={styled.Button} style={{marginBottom:'2rem'}}>
+            GERAR CHAVE PIX DE COBRANÇA
+        </Button>
+        <Modal
+          visible={TransferenciaVisible}
+          title="Dados da chave"
+          onCancel={showCloseModalTransferencia}
+          footer={[
+            <Button key="submit" type="primary" onClick={showCloseModalTransferencia}>
+              Gerar
+                </Button>,
+            <Button key="submit" type="primary" onClick={showCloseModalTransferencia}>
+              Cancelar
+                </Button>]} >
+          <PixCobrancaModal />
+        </Modal>
+      </Row>
       <Row className={styled.Row} style={{padding:'3rem 0rem'}}>
         <h2>Últimas  Transferências</h2>
         <PixDepositoTable />

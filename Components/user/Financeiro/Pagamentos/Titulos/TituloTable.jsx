@@ -1,5 +1,5 @@
 import { Table } from 'antd';
-import  styled  from '../../../styles/Transferencia.module.css' 
+import styled from '../../../../../styles/Transferencia.module.css';
 
 export default function TituloTable() {
   const columns = [

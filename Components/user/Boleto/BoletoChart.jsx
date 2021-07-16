@@ -18,7 +18,8 @@ export default function BoletoChart() {
   ]
   return(
     <Chart
-      width={'100%'}
+      style={{margin: '1rem 3rem 3rem'}}
+      width={'90%'}
       height={'300px'}
       chartType="Bar"
       loader={<div>Loading Chart</div>}

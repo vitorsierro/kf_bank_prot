@@ -30,7 +30,7 @@ export default function FormEndereco() {
       </Col>
       <Col className={styled.Col}>
         <Form.Item label="CEP:">
-          <Input placeholder='xxxxx-xxx' value={cep} 
+          <Input placeholder='XXXXX-XXX' value={cep} 
             onChange={(e) => setCep(e.target.value)} />  
         </Form.Item>
       </Col>
@@ -52,7 +52,7 @@ export default function FormEndereco() {
     <Row gutter={[48,48]}>
       <Col className={styled.Col}>
       <Form.Item label="Endereço:" >
-        <Input placeholder='endereço:' value={endereco} 
+        <Input placeholder='Endereço:' value={endereco} 
             onChange={(e) => setEndereco(e.target.value)} />  
       </Form.Item>
       </Col>

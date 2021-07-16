@@ -1,10 +1,13 @@
-import { Button, Col, Row, Modal } from "antd";
-import HeaderUser from "../../../Components/user/HeaderUser/HeaderUser";
-import KFBankTable from "../../../Components/user/KFCard/KFBankTable";
-import RecargaModal from "../../../Components/user/KFCard/RecargaModal";
-import styled from '../../../styles/Transferencia.module.css'
+//CSS
+import { Button, Row, Modal } from "antd";
+import styled from '../../../styles/Transferencia.module.css';
+
+//Components
 import { useState } from "react";
+import HeaderUser from "../../../Components/user/HeaderUser/HeaderUser";
+import RecargaModal from "../../../Components/user/KFCard/RecargaModal";
 import RecargaTable from "../../../Components/user/KFCard/RecargaTable";
+
 export default function Recarga() {
   const [visibleModal, setVisibleModal] = useState(false);
   const showModalRecarga = () => { setVisibleModal(true) };
@@ -13,11 +16,7 @@ export default function Recarga() {
   return (
     <>
       <HeaderUser />
-      <Row style={{
-        justifyContent: 'flex-start',
-        marginBottom: '2rem', marginLeft: '8rem'
-      }} >
-        <Col className={styled.Col}>
+        <Row className={styled.Row}>
           <Button type="primary" onClick={showModalRecarga}
             className={styled.Button}>
             Recarga de Celular
@@ -32,8 +31,7 @@ export default function Recarga() {
               </Button>]} >
             <RecargaModal />
           </Modal>
-        </Col>
-      </Row>
+        </Row>
       <Row className={styled.Row}>
         <RecargaTable />
       </Row>

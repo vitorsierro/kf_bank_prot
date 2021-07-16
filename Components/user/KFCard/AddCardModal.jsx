@@ -12,11 +12,12 @@ export default function AddCardModal() {
   
   return (
     <Form name="validacaoCardModal" size='large' layout="vertical" onFinish={onFinish} requiredMark={false} >
+      <h2>Dados Pessoais</h2>
       <FormPessoal />    
-      <h3>Endereço</h3>
+      <h2>Endereço</h2>
       <FormEndereco />  
       <Form.Item label="Nome da Mãe Completo:">
-        <Input placeholder='nome da mãe completo:' />  
+        <Input placeholder='Nome da Mãe Completo:' />  
       </Form.Item>
     </Form>
   );

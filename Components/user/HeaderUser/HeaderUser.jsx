@@ -59,7 +59,7 @@ export default function HeaderUser() {
       <div>
         <div className={styled.Hamburgue}>
           <input type="checkbox"  id="checkbox-menu" value={isDrawVisible} onClick={showModal} />
-          <label for="checkbox-menu">
+          <label htmlFor="checkbox-menu">
             <span></span>
             <span></span>
             <span></span>

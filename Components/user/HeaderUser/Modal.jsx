@@ -67,7 +67,7 @@ export default function Modal({ onClose = () => { } }) {
      <Header />
       <Row gutter={[8, 8]}>
           <Col span={8} className={styled.Item} >
-            <Link href="/Users/Pix/Deposito">
+            <Link href="/Users/Pix/Deposito" >
               <li>
                 <Image src={deposito} width={width} height={height}
                   quality={100} />
@@ -76,7 +76,7 @@ export default function Modal({ onClose = () => { } }) {
             </Link>
           </Col>
           <Col span={8} className={styled.Item} >
-            <Link href="/Users/Pix/Resgate">
+            <Link href="/Users/Pix/Resgate" >
               <li>
                 <Image src={resgate} width={width} height={height}
                   quality={100} />
@@ -85,7 +85,7 @@ export default function Modal({ onClose = () => { } }) {
             </Link>
           </Col>
           <Col span={8} className={styled.Item} >
-            <Link href="/Users/Pix/Cobranca">
+            <Link href="/Users/Pix/Cobranca" >
               <li>
                 <Image src={cobranca} width={width} height={height}
                   quality={100} />
@@ -102,7 +102,7 @@ export default function Modal({ onClose = () => { } }) {
         <Header />
         <Row gutter={[8, 8]}>
           <Col span={8} className={styled.Item} >
-            <Link href="/Users/KFCard/KFCard">
+            <Link href="/Users/KFCard/KFCard" >
               <li>
                 <Image src={card} width={width} height={height}
                   quality={100} />
@@ -111,7 +111,7 @@ export default function Modal({ onClose = () => { } }) {
             </Link>
           </Col>
           <Col span={8} className={styled.Item} >
-            <Link href="/Users/KFCard/Recarga">
+            <Link href="/Users/KFCard/Recarga" >
               <li>
                 <Image src={recarga} width={width} height={height}
                   quality={100} />

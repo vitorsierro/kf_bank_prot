@@ -40,13 +40,13 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
   const height = 30;
 
   function handleReturn(id) {
-    if(id === 1){
+    if (id === 1) {
       onReturn()
     }
-    else{
-    setVendasCartaoIsTrue(false);
-    setPagamentosIsTrue(false);
-  }
+    else {
+      setVendasCartaoIsTrue(false);
+      setPagamentosIsTrue(false);
+    }
 
   }
   return (
@@ -57,7 +57,7 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
             <Header />
             <Row gutter={[8, 8]}>
               <Col span={8} className={styled.Item} >
-                <Link href="/Financeiro/Pagamentos/Transacoes">
+                <Link href="/Users/Financeiro/VendasCartao/Transacoes">
                   <li>
                     <Image src={card} width={width} height={height}
                       quality={100} />
@@ -66,7 +66,7 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
                 </Link>
               </Col>
               <Col span={8} className={styled.Item} >
-                <Link href="/Financeiro/Pagamentos/Recorrencia">
+                <Link href="/Users/Financeiro/VendasCartao/Recorrencia">
                   <li>
                     <Image src={card} width={width} height={height}
                       quality={100} />
@@ -75,7 +75,7 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
                 </Link>
               </Col>
               <Col span={8} className={styled.Item} >
-                <Link href="/Financeiro/Pagamentos/Estabelecimentos">
+                <Link href="/Users/Financeiro/VendasCartao/Estabelecimento">
                   <li>
                     <Image src={card} width={width} height={height}
                       quality={100} />
@@ -93,17 +93,16 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
                   <Header />
                   <Row gutter={[8, 8]}>
                     <Col span={8} className={styled.Item} >
-                      <Link href="/Financeiro/Pagamentos/Transacoes">
+                      <Link href="/Users/Financeiro/Pagamentos/Transacoes">
                         <li>
-                          <Image src={card} width={width} height={height}
-                            quality={100} />
+                          <Image src={card} width={width} height={height} quality={100} />
                           <span>Transferências</span>
                         </li>
                       </Link>
                     </Col>
 
                     <Col span={8} className={styled.Item} >
-                      <Link href="/Financeiro/Pagamentos/Titulo">
+                      <Link href="/Users/Financeiro/Pagamentos/Titulos">
                         <li>
                           <Image src={card} width={width} height={height}
                             quality={100} />
@@ -113,7 +112,7 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
                     </Col>
 
                     <Col span={8} className={styled.Item} >
-                      <Link href="/Financeiro/Pagamentos/ContasFavorecidas">
+                      <Link href="/Users/Financeiro/Pagamentos/ContasFavorecidas">
                         <li>
                           <Image src={card} width={width} height={height}
                             quality={100} />
@@ -128,7 +127,7 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
                   <Header id={1} />
                   <Row gutter={[8, 8]}>
                     <Col span={8} className={styled.Item} >
-                      <Link href="/Financeiro/Extrato">
+                      <Link href="/Users/Financeiro/Extrato">
                         <li>
                           <Image src={extrato} width={width} height={height}
                             quality={100} />
@@ -137,7 +136,7 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
                       </Link>
                     </Col>
                     <Col span={8} className={styled.Item} >
-                      <Link href="/Financeiro/Resgate">
+                      <Link href="/Users/Financeiro/Resgate">
                         <li>
                           <Image src={resgate} width={width} height={height}
                             quality={100} />
@@ -146,7 +145,7 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
                       </Link>
                     </Col>
                     <Col span={8} className={styled.Item} >
-                      <Link href="/Financeiro/Deposito">
+                      <Link href="/Users/Financeiro/Deposito">
                         <li>
                           <Image src={deposito} width={width} height={height}
                             quality={100} />
@@ -159,7 +158,7 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
 
                   <Row gutter={[8, 8]}>
                     <Col span={8} className={styled.Item} >
-                      <Link href="/Financeiro/Boletos">
+                      <Link href="/Users/Financeiro/Boletos">
                         <li>
                           <Image src={boleto} width={width} height={height}
                             quality={100} />
@@ -168,7 +167,7 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
                       </Link>
                     </Col>
                     <Col span={8} className={styled.Item} >
-                      <Link href="/Financeiro/Cobranca">
+                      <Link href="/Users/Financeiro/Cobranca">
                         <li>
                           <Image src={cobranca} width={width} height={height}
                             quality={100} />
@@ -178,7 +177,7 @@ export default function Financeiro({ onClose = {}, onReturn = {} }) {
                     </Col>
 
                     <Col span={8} className={styled.Item} >
-                      <Link href="/Financeiro/RelatorioCobrancas">
+                      <Link href="/Users/Financeiro/RelatorioCobrancas" >
                         <li>
                           <Image src={relatorio} width={width} height={height}
                             quality={100} />

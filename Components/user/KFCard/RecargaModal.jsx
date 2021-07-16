@@ -25,7 +25,7 @@ export default function RecargaModal() {
           <Form.Item label="Cartão">
             <Select value={cartao}
               onChange={(value) => setCartao(value)}>
-              <Option value="">Selecione</Option>
+              <Option value="">Selecione..</Option>
               <Option value="visa">Visa</Option>
             </Select>
             </Form.Item>
@@ -39,39 +39,31 @@ export default function RecargaModal() {
                   onChange={(date) => setValidadeCard(date)} />
               </Form.Item>
               <Form.Item label="CVV" >
-                <Input placeholder='cvv:' maxLength={4} value={cvv} onChange={(e) => setCvv(e.target.value)} type='number' />
+                <Input placeholder='CVV:' maxLength={4} value={cvv} onChange={(e) => setCvv(e.target.value)} type='number' />
               </Form.Item>
             </Input.Group>
           </Col>
         </Row>
 
-        <Row gutter={[24,24]} style={{marginRight:'-1rem'}}>          
+        <Row gutter={[24,24]} style={{marginLeft:'unset', marginRight:'unset'}}>          
             <Input.Group compact={true}>
             <Form.Item label="Cartão">
               <Select value={operadoras} style={{marginRight:'2rem'}}
                 onChange={(value) => setOperadoras(value)}>
-                <Option value="">Selecione</Option>
+                <Option value="">Selecione..</Option>
                 <Option value="visa">Tim</Option>
               </Select>
               </Form.Item>
             <Form.Item label="Valor" style={{margin:'0rem 2rem'}}>
               <Select value={valor}
                 onChange={(value) => setValor(value)}>
-                <Option value="">Selecione</Option>
+                <Option value="">Selecione..</Option>
                 <Option value="20">R$ 20,00</Option>
               </Select>
             </Form.Item>
-            <Form.Item label="DDD">
-              <Select value={codigoDDD} required style={{width:'8rem'}}
-                onChange={(value) => setCodigoDDD(value)}>
-                {codigoddd.map(({ codigo, estado }) => (
-                  <Option value={codigo}>{codigo} - {estado} </Option>
-                ))}
-              </Select>
-              </Form.Item>
-              <Form.Item label="Telefone" style={{margin:'0rem 2rem'}}
+            <Form.Item label="Telefone" style={{margin:'0rem 2rem'}}
                 rules={[{ colon: false, required: true }]}>
-                <Input placeholder='(xx)xxxxx-xxxx' value={telefone} onChange={(e) => setTelefone(e.target.value)} maxLength={9} type='tel' />
+                <Input placeholder='(XX)XXXXX-XXXX' value={telefone} onChange={(e) => setTelefone(e.target.value)} maxLength={11} type='tel' />
               </Form.Item>
               <Form.Item label="Senha">
                 <Input.Password placeholder="insira a senha" value= {senha} onChange={(e) => setSenha(e.target.value)} 

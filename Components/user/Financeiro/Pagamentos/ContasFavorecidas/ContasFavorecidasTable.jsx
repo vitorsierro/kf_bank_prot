@@ -1,5 +1,5 @@
 import { Table } from 'antd';
-import  styled  from '../../../styles/Transferencia.module.css' 
+import styled from '../../../../../styles/Transferencia.module.css';
 
 export default function ContasFavorecidasTable() {
   const columns = [
@@ -34,6 +34,10 @@ export default function ContasFavorecidasTable() {
     {
       title: 'Tipo de Conta',
       dataIndex: 'tipoConta',
+    },
+    {
+      title: 'Ação',
+      dataIndex: 'acao',
     }
   ];
   const data = [
@@ -46,7 +50,8 @@ export default function ContasFavorecidasTable() {
       numeroBanco:'numeroBanco',
       agencia:'agencia',
       numeroConta:'numeroConta',
-      tipoConta:'tipoConta'
+      tipoConta:'tipoConta',
+      acao:'Ação'
     },
     {
       key: '2',
@@ -57,7 +62,8 @@ export default function ContasFavorecidasTable() {
       numeroBanco:'numeroBanco',
       agencia:'agencia',
       numeroConta:'numeroConta',
-      tipoConta:'tipoConta'
+      tipoConta:'tipoConta',
+      acao:'Ação'
     }
   ];
   
@@ -68,6 +74,7 @@ export default function ContasFavorecidasTable() {
   return(
     <Table columns={columns} dataSource={data} 
     pagination={{ pageSize:6 }}
-    onChange={onChange} className={`${styled.TableBackground} ${styled.TablePix}`} />
+    onChange={onChange} className={`${styled.TableBackground} ${styled.TablePix}`}
+    style={{justifyContent:'unset', padding:'3rem 1rem !important', margin:'1rem 0rem !important'}} />
     )
 };

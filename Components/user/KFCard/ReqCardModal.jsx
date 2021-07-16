@@ -12,14 +12,15 @@ export default function ReqCardModal() {
   
   return(
     <Form name="validacaoCardModal" size='large' layout="vertical" onFinish={onFinish} requiredMark={false}>
-    <FormPessoal />    
-    <Form.Item label="Nome da Mãe Completo:">
-      <Input placeholder='nome da mãe completo:' />  
-    </Form.Item>
-    <h3>Endereço</h3>
-    <FormEndereco />  
-    <h2>Dados do Cartão Avulso</h2>
-    <FormFinanceiro />
+      <h2>Dados Pessoais</h2>
+      <FormPessoal />    
+      <Form.Item label="Nome da Mãe Completo:">
+        <Input placeholder='Nome da Mãe Completo:' />  
+      </Form.Item>
+      <h2>Endereço</h2>
+      <FormEndereco />  
+      <h2>Dados do Cartão Avulso</h2>
+      <FormFinanceiro />
   </Form>
   );
 };
