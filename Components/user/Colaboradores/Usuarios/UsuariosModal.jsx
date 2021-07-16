@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Link from 'next/Link';
+import Link from 'next/link';
 //CSS
 import { Row, Col, Input, Form, Select, Radio, Checkbox } from "antd";
 import styled from '../../../../styles/Transferencia.module.css';
